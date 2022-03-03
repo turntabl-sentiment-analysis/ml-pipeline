@@ -1,11 +1,11 @@
 from pydantic import BaseModel
 
 
-class RequestObject(BaseModel):
+class ModelOutputRequest(BaseModel):
     model: str
     text: str
 
 
-class ResponseObject(BaseModel):
+class ModelOutputResponse(BaseModel):
     model: str
     score: int
