@@ -1,7 +1,7 @@
 from flask import Blueprint
 from flask_pydantic import validate
 
-from src.services.model_score import get_model_output
+from src.services.model_output import get_model_output
 from src.models.models import ModelOutputRequest
 
 model_blueprint = Blueprint('model', __name__)

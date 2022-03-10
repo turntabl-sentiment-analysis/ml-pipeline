@@ -1,10 +1,18 @@
+import unittest
 import json
 
-import requests
+from main import app
 
 
-def test_get_sentiment_check_status_code_equals_200():
-    body = {"model": "TextBlob", "text": "I am happy"}
-    response = requests.post(" http://127.0.0.1:5000/sentiment/sentiment-score", data=json.dumps(body),
-                             headers={'Content-Type': 'application/json'})
-    assert response.status_code == 200
+class get_sentiment_result_test(unittest.TestCase):
+
+    def setUp(self):
+        self.app = app.test_client()
+
+    def test_successful_sentiment_result(self):
+        payload = json.dumps({"model": "TextBlob", "text": "I am happy"})
+        response = self.app.post("api/v1/sentiment-analysis",
+                                 headers={"Content-Type": "application/json"},
+                                 data=payload)
+
+        self.assertEquals(200, response.status_code)
