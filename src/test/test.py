@@ -15,3 +15,7 @@ class get_sentiment_result_test(unittest.TestCase):
 
         self.assertEquals(200, response.status_code)
 
+if __name__=='__main__':
+    app.run()
+
+
