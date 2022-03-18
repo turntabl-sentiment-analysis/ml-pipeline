@@ -1,5 +1,4 @@
 from kedro.pipeline import Pipeline, node, pipeline
-
 from .nodes import split_data
 
 
