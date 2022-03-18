@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from enum import Enum
+from typing import List, Dict
 
 
 class SentimentType(str, Enum):
@@ -19,10 +20,9 @@ class ModelOutputResponse(BaseModel):
 
 class TextBlobOutputRequest(BaseModel):
     text: str
-    sentiment: SentimentType
+    sentiment_type: List[SentimentType]
+
 
 
 class TextBlobOutputResponse(BaseModel):
-    sentiment: SentimentType
-    text: str
-    score: float
+    sentiment_response: Dict[SentimentType,float]

@@ -2,7 +2,11 @@ import unittest
 import json
 from main import app
 
+
 class get_sentiment_result_test(unittest.TestCase):
+
+    def __init__(self):
+        self.app = None
 
     def setUp(self):
         self.app = app.test_client()
@@ -14,4 +18,3 @@ class get_sentiment_result_test(unittest.TestCase):
                                  data=payload)
 
         self.assertEquals(200, response.status_code)
-

@@ -9,18 +9,23 @@ def get_model_output(body: ModelOutputRequest):
     return ModelOutputResponse(model=model, score=score)
 
 
-def get_textblob_output(body: TextBlobOutputRequest):
-    blob = TextBlob(body.text)
-    score = check_sentiment_type(blob, body)
-    return TextBlobOutputResponse(score=score, text=body.text, sentiment=body.sentiment)
+def get_textblob_output(sentiment_request: TextBlobOutputRequest):
+    text_blob_request = TextBlob(sentiment_request.text)
+    response_object = check_sentiment_type_and_get_score(text_blob_request,sentiment_request.sentiment_type)
+    return TextBlobOutputResponse(sentiment_response=response_object)
 
 
-def check_sentiment_type(blob, body):
-    score = 0
-    if body.sentiment == "polarity":
-        for sentence in blob.sentences:
-            score = sentence.sentiment.polarity
-    else:
-        for sentence in blob.sentences:
-            score = sentence.sentiment.subjectivity
-    return score
+def check_sentiment_type_and_get_score(text, list_of_sentiment_type):
+    text_blob_sentiment_response = {}
+    for sentiment_type in list_of_sentiment_type:
+        if sentiment_type == "polarity":
+            for sentence in text.sentences:
+                score = sentence.sentiment.polarity
+                text_blob_sentiment_response["polarity"] = score
+        else:
+            for sentence in text.sentences:
+                score = sentence.sentiment.subjectivity
+                text_blob_sentiment_response["subjectivity"] = score
+    return text_blob_sentiment_response
+
+
