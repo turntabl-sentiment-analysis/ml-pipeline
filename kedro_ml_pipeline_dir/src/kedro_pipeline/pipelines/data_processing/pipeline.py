@@ -7,7 +7,7 @@ def create_pipeline(**kwargs) -> Pipeline:
             node(
                 func=preprocess_twitter_sentiment_dataset,
                 inputs="twitter_sentiment",
-                outputs="processed_twitter_sentiment_dataset",
+                outputs="preprocessed_twitter_sentiment",
                 name="preprocess_twitter_sentiment_node",
             )
         ]
