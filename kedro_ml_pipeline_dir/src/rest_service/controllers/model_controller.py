@@ -1,8 +1,8 @@
 from flask import Blueprint
 from flask_pydantic import validate
 
-from src.services.service import check_sentiment_type_and_get_score
-from src.models.models import ModelOutputRequest
+from rest_service.services.service import check_sentiment_type_and_get_score
+from rest_service.models.models import ModelOutputRequest
 
 model_blueprint = Blueprint('model', __name__)
 

@@ -1,12 +1,11 @@
 twitter_sentiment:
   type: pandas.CSVDataSet
   filepath: data\01_raw\twitter_sentiment_dataset.csv
+  load_args:
+    encoding: utf8
+
 
 preprocessed_twitter_sentiment:
-    type: pandas.ParquetDataSet
-    filepath: data/02_intermediate/preprocessed_twitter_sentiment.pq
-
-preprocessed_twitter_sentiment_csv:
     type: pandas.CSVDataSet
     filepath: data/02_intermediate/preprocessed_twitter_sentiment.csv
 
