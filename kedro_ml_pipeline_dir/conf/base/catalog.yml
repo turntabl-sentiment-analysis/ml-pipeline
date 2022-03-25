@@ -1,15 +1,12 @@
-twitter_sentiment:
+data:
   type: pandas.CSVDataSet
-  filepath: data\01_raw\twitter_sentiment_dataset.csv
+  filepath: data\01_raw\Sentiment.csv
   load_args:
     encoding: utf8
+    usecols: ['text','sentiment']
 
 
-preprocessed_twitter_sentiment:
-    type: pandas.CSVDataSet
-    filepath: data/02_intermediate/preprocessed_twitter_sentiment.csv
+preprocess_dataset:
+    type: pandas.ParquetDataSet
+    filepath: data/02_intermediate/preprocess_dataset.pq
 
-svc:
-  type: pickle.PickleDataSet
-  filepath: data/06_models/regressor.pickle
-  versioned: true
