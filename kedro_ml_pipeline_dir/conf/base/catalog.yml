@@ -5,8 +5,13 @@ data:
     encoding: utf8
     usecols: ['text','sentiment']
 
-
 preprocess_dataset:
     type: pandas.ParquetDataSet
     filepath: data/02_intermediate/preprocess_dataset.pq
+
+sentiment:
+  type: kedro.extras.datasets.tensorflow.TensorFlowModelDataset
+  filepath: data/06_models/sentiment.h5
+  layer: models
+  versioned: true
 
