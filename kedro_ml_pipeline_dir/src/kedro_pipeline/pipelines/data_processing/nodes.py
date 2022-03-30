@@ -3,6 +3,7 @@ import numpy as np
 import spacy as sp
 import re
 
+
 def preprocess_dataset(data: pd.DataFrame) -> pd.DataFrame:
     data['text'] = data['text'].apply(preprocess_data)
     return data

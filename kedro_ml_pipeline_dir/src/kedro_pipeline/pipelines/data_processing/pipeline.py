@@ -10,6 +10,5 @@ def create_pipeline(**kwargs) -> Pipeline:
                 outputs="preprocess_dataset",
                 name="preprocess_twitter_sentiment_node",
             )
-
         ]
     )

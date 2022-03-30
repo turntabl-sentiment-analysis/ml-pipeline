@@ -9,9 +9,7 @@ preprocess_dataset:
     type: pandas.ParquetDataSet
     filepath: data/02_intermediate/preprocess_dataset.pq
 
-sentiment:
-  type: kedro.extras.datasets.tensorflow.TensorFlowModelDataset
-  filepath: data/06_models/sentiment.h5
-  layer: models
+model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/model.pickle
   versioned: true
-

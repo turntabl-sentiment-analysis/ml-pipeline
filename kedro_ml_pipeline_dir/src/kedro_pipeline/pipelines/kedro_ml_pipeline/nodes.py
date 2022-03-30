@@ -22,7 +22,7 @@ def split_data(preprocess_dataset: pd.DataFrame, parameters: Dict) -> Tuple:
     return X_train, X_test, y_train, y_test
 
 
-def train_model(X_train: pd.DataFrame, y_train:pd.Series, preprocess_dataset:pd.DataFrame,parameters: Dict) -> Sequential:
+def train_model(preprocess_dataset:pd.DataFrame) -> Sequential:
     model = Sequential()
     tokenizer = Tokenizer(num_words=2000, split=' ')
     tokenizer.fit_on_texts(preprocess_dataset['text'].values)
@@ -37,7 +37,7 @@ def train_model(X_train: pd.DataFrame, y_train:pd.Series, preprocess_dataset:pd.
     Y = pd.get_dummies(preprocess_dataset['sentiment']).values
     X_train, X_test, y_train, y_test = train_test_split( X, Y, test_size=0.2)
     model.fit(X_train, y_train, epochs=10, batch_size=512, validation_data=(X_test, y_test))
-    saved_model = model.save("sentiment.h5")
-    return saved_model
+    return model
+
 
 
