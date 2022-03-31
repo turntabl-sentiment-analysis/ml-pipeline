@@ -31,7 +31,6 @@ def predict(sentiment_request: ModelPredictionRequest):
   loaded_model = tf.keras.models.load_model("C:\\Users\\User\\Desktop\\MainProject\\ml-pipeline\\kedro_ml_pipeline_dir\\src\\rest_service\\services\\sentiment.h5")
   predictions = loaded_model.predict(clean_text)
   pred = predictions.tolist()[0]
-  print(pred)
   for value in sentiment_request.ttlab_sentiment_type:
     if value == "POSITIVE":
       response["POSITIVE"] = pred[2]

@@ -4,8 +4,10 @@ from textblob import TextBlob
 
 
 def get_textblob_output(sentiment_request: TextBlobOutputRequest):
+    print(sentiment_request.text,sentiment_request.sentiment_type)
     text_blob_request = TextBlob(sentiment_request.text)
     response_object = check_sentiment_type_and_get_score(text_blob_request, sentiment_request.sentiment_type)
+    print(response_object)
     polarity_score = response_object["POLARITY"]
     label = sentiment_label(polarity_score)
     print(label)
@@ -15,8 +17,8 @@ def get_textblob_output(sentiment_request: TextBlobOutputRequest):
 
 def check_sentiment_type_and_get_score(text, list_of_sentiment_type):
     text_blob_sentiment_response = {}
-    for sentiment_type in list_of_sentiment_type:
-        if sentiment_type == "POLARITY":
+    for item in list_of_sentiment_type:
+        if item == "POLARITY":
             for sentence in text.sentences:
                 score = sentence.sentiment.polarity
                 text_blob_sentiment_response["POLARITY"] = score
@@ -29,8 +31,8 @@ def check_sentiment_type_and_get_score(text, list_of_sentiment_type):
 
 def sentiment_label(score):
     if score > 0:
-        return "positive"
+        return "POSITIVE"
     elif score == 0:
-        return "neutral"
+        return "NEUTRAL"
     else:
-        return "negative"
+        return "NEGATIVE"

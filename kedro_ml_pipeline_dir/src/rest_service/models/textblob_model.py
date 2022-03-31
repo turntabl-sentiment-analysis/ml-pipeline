@@ -9,6 +9,5 @@ class TextBlobOutputRequest(BaseModel):
     sentiment_type: List[SentimentType]
 
 class TextBlobOutputResponse(BaseModel):
-    sentiment_response: Dict[SentimentType,float]
+    sentiment_response: Dict[SentimentType, float]
     sentiment_label : SentimentLabel
-
