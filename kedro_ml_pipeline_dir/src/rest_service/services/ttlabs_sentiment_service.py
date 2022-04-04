@@ -1,5 +1,6 @@
 from posixpath import split
 from xml.sax.handler import property_interning_dict
+from rest_service.models.enums.sentiment_label import SentimentLabel
 from rest_service.models.ttlabs_sentiment_model import ModelPredictionRequest
 from rest_service.models.ttlabs_sentiment_model import ModelPredictionResponse
 import numpy as np
@@ -26,16 +27,20 @@ def my_pipeline(text_sentiment):
 
 
 def predict(sentiment_request: ModelPredictionRequest):
-  response = {}
-  clean_text = my_pipeline(sentiment_request.text_sentiment)
+  sentiment_type = []
+  clean_text = my_pipeline(sentiment_request.text)
   loaded_model = tf.keras.models.load_model("C:\\Users\\User\\Desktop\\MainProject\\ml-pipeline\\kedro_ml_pipeline_dir\\src\\rest_service\\services\\sentiment.h5")
   predictions = loaded_model.predict(clean_text)
-  pred = predictions.tolist()[0]
-  for value in sentiment_request.ttlab_sentiment_type:
-    if value == "POSITIVE":
-      response["POSITIVE"] = pred[2]
-    elif value == "NEUTRAL":
-      response["NEUTRAL"] = pred[1]
-    else:
-      response["NEGATIVE"] = pred[0]
-  return ModelPredictionResponse(sentiment_response = response)
+  sentiment = int(np.argmax(predictions))
+  probability = max(predictions.tolist()[0])
+  if sentiment == 0:
+    sentiment_type = SentimentLabel.negative
+  if sentiment == 1:
+    sentiment_type = SentimentLabel.neutral
+  if sentiment == 2:
+    sentiment_type = SentimentLabel.positive
+  return ModelPredictionResponse(sentiment_type = sentiment_type, score = probability)
+
+
+  
+ 

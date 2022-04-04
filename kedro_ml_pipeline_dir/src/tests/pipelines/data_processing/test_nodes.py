@@ -4,7 +4,7 @@ from conftest import basic_data
 from kedro_ml_pipeline_dir.src.kedro_pipeline.pipelines.data_processing.nodes import preprocess_dataset
 import pytest
 
-# @pytest.fixture(scope='module')
+@pytest.fixture
 def basic_data():
     dataset = pd.DataFrame({
         "text": [
