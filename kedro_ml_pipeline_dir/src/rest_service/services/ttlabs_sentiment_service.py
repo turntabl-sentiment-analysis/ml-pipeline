@@ -34,11 +34,11 @@ def predict(sentiment_request: ModelPredictionRequest):
   sentiment = int(np.argmax(predictions))
   probability = max(predictions.tolist()[0])
   if sentiment == 0:
-    sentiment_type = SentimentLabel.negative
+    sentiment_type = SentimentLabel.NEGATIVE
   if sentiment == 1:
-    sentiment_type = SentimentLabel.neutral
+    sentiment_type = SentimentLabel.NEUTRAL
   if sentiment == 2:
-    sentiment_type = SentimentLabel.positive
+    sentiment_type = SentimentLabel.POSITIVE
   return ModelPredictionResponse(sentiment_type = sentiment_type, score = probability)
 
 

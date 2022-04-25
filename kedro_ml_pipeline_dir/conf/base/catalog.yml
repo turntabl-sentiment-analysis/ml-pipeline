@@ -8,6 +8,10 @@ data:
 preprocess_dataset:
     type: pandas.ParquetDataSet
     filepath: data/02_intermediate/preprocess_dataset.pq
+  
+preprocess_dataset_new:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/preprocess_dataset.csv
 
 model:
   type: pickle.PickleDataSet
