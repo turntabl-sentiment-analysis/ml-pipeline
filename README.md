@@ -127,7 +127,7 @@ To automatically strip out all output cell contents before committing to `git`, 
 [Further information about building project documentation and packaging your project](https://kedro.readthedocs.io/en/stable/03_tutorial/08_package_a_project.html)
 
 
-##Running the flask app
+## Running the flask app
 use the command
 ```
 python .\main.py
