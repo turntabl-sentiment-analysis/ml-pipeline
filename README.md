@@ -2,9 +2,9 @@
 
 ## Overview
 This project is a sentimment analysis project with three endpoints namely:
-Textblob endpoint (textblob/v1/textblob-get-sentiment-score)
-TTLABS sentiment enpoint (sentiment/v1/sentiment-score)
-Sentimentanalysis endpoint(api/v1/sentiment-analysis)
+* Textblob endpoint (textblob/v1/textblob-get-sentiment-score)
+* TTLABS sentiment enpoint (sentiment/v1/sentiment-score)
+* Sentimentanalysis endpoint(api/v1/sentiment-analysis)
 
 
 This project was generated using  `Kedro 0.17.7`.
