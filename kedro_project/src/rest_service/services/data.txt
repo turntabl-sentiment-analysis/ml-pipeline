@@ -1,0 +1,1 @@
+DATA_PATH="C://Users//User//Desktop//MainProject//ml-pipeline//kedro_project//src//rest_service//csv_dataset//Sentiment.csv"

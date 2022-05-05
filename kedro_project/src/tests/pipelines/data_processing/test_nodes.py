@@ -1,7 +1,7 @@
 import pandas as pd
 import imp, sys, os
 from conftest import basic_data
-from kedro_ml_pipeline_dir.src.kedro_pipeline.pipelines.data_processing.nodes import preprocess_dataset
+from kerdo_project.src.kedro_pipeline.pipelines.data_processing.nodes import preprocess_dataset
 import pytest
 
 

@@ -6,9 +6,9 @@ from typing import List, Dict
 
 class TextBlobOutputRequest(BaseModel):
     text: str
-    sentiment_type: List[SentimentType]
+    sentiment_type: List[str]
 
 
 class TextBlobOutputResponse(BaseModel):
-    sentiment_response: Dict[SentimentType, float]
-    sentiment_label: SentimentLabel
+    sentiment_response: Dict[str, float]
+    # sentiment_label: SentimentLabel

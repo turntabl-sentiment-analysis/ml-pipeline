@@ -1,5 +1,5 @@
 """kedro_ml_pipeline file for ensuring the package is executable
-as `kedro_ml_pipeline_dir` and `python -m kedro_pipeline`
+as `kerdo_project` and `python -m kedro_pipeline`
 """
 import importlib
 from pathlib import Path

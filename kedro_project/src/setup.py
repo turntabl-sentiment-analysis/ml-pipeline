@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 entry_point = (
-    "kedro_ml_pipeline_dir = kedro_pipeline.__main__:main"
+    "kerdo_project = kedro_pipeline.__main__:main"
 )
 
 
@@ -21,7 +21,7 @@ setup(
     install_requires=requires,
     extras_require={
         "docs": [
-            "docutils<0.18.0",
+            "docutils<0.17.7",
             "sphinx~=3.4.3",
             "sphinx_rtd_theme==0.5.1",
             "nbsphinx==0.8.1",

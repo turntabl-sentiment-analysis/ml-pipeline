@@ -12,7 +12,7 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from kedro_pipeline.pipelines.data_processing.nodes import preprocess_data
 
-data1 = pd.read_csv("C:\\Users\\User\\Desktop\\MainProject\\ml-pipeline\\kedro_ml_pipeline_dir\\src\\rest_service\\csv_dataset\\Sentiment.csv")
+data1 = pd.read_csv("C://Users//User//Desktop//MainProject//ml-pipeline//kedro_project//src//rest_service//csv_dataset//Sentiment.csv")
 tokenizer = Tokenizer(num_words=2000, split=' ')
 tokenizer.fit_on_texts(data1['text'].values)
 
@@ -29,7 +29,7 @@ def my_pipeline(text_sentiment):
 def predict(sentiment_request: ModelPredictionRequest):
   sentiment_type = ""
   clean_text = my_pipeline(sentiment_request.text)
-  loaded_model = tf.keras.models.load_model("C:\\Users\\User\\Desktop\\MainProject\\ml-pipeline\\kedro_ml_pipeline_dir\\src\\rest_service\\saved_model\\sentiment.h5")
+  loaded_model = tf.keras.models.load_model("C://Users//User//Desktop//MainProject//ml-pipeline//kedro_project//src//rest_service//saved_model//sentiment.h5")
   predictions = loaded_model.predict(clean_text)
   sentiment = int(np.argmax(predictions))
   probability = max(predictions.tolist()[0])

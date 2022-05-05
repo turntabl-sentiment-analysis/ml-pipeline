@@ -3,7 +3,7 @@ import sys
 from great_expectations import DataContext
 
 # checkpoint configuration
-context = DataContext("kedro_ml_pipeline_dir/great_expectations")
+context = DataContext("kerdo_project/great_expectations")
 checkpoint = context.get_checkpoint("sentiment_analysis_checkpoint")
 
 # load batches of data
