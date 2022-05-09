@@ -9,6 +9,8 @@ import tensorflow as tf
 import re
 import os
 from keras.preprocessing.text import Tokenizer
+
+from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from kedro_pipeline.pipelines.data_processing.nodes import preprocess_data
 
@@ -41,6 +43,3 @@ def predict(sentiment_request: ModelPredictionRequest):
     sentiment_type = SentimentLabel.POSITIVE
   return ModelPredictionResponse(sentiment_type = sentiment_type, score = probability)
 
-
-  
- 

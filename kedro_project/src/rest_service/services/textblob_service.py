@@ -9,10 +9,14 @@ from textblob import TextBlob
 def get_textblob_output(sentiment_request: TextBlobOutputRequest):
     text_blob_request = TextBlob(sentiment_request.text)  
     list_sentiment_types= [] 
+    list_sentiment_response = []
     for sentiment in sentiment_request.sentiment_type:    
         record = db_connection(sentiment)    
         list_sentiment_types.append(record[0][3])
     response_object = check_sentiment_type_and_get_score(text_blob_request, list_sentiment_types)
+    # for sentiment in sentiment_request.sentiment_type:  
+        # if sentiment  
+
     return TextBlobOutputResponse(sentiment_response=response_object)
 
 
