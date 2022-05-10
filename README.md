@@ -1,8 +1,7 @@
 
 # Sentiment Analysis 
 
-This project is a Sentiment Analysis project which is built in python and flask framework. Tensorflow and keras was used to build the predictive model. The predictive model predict if a given text is positive, negative or neutral.
-Kedro framework was used to build reproducible and concise code of the machine learning workflow. Flask was used to build the microservice to receive the request object from the fronend client.
+This project is a Sentiment Analysis project which is built in python and flask framework. Tensorflow and Keras were used to build the predictive model. The predictive model predicts whether a given text is positive, negative, or neutral. Kedro framework was used to build reproducible and concise code for the machine learning workflow. Flask was used to build the microservice to receive the request object from the frontend client.
  
 ## API Reference
 
@@ -15,7 +14,7 @@ Kedro framework was used to build reproducible and concise code of the machine l
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `text`      | `string` | **Required**. Required, should not be null |
-| `sentiment_type` | `string` |  **Required**. takes a list of sentiment_type []|
+| `sentiment_type` | `string` |  **Required**. ["TEXTBLOB_POLARITY","TEXTBLOB_SUBJECTIVITY","TTLABS_POLARITY"]|
 
 
 ## Contributing
