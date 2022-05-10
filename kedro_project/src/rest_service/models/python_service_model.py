@@ -12,7 +12,7 @@ class PythonModelOutputRequest(BaseModel):
 
 
 class PythonModelOutputResponse(BaseModel):
-    general_response: Dict[str, float]
+    sentiment_analysis_response: Dict[str, float]
     TTLABS_POLARITY : str
    
 
