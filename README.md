@@ -21,32 +21,24 @@ This project is a Sentiment Analysis project which is built in python and flask 
 
 Contributions are always welcome!
 
+
 See `contributing.md` for ways to get started.
 
 Please adhere to this project's `code of conduct`.
 
 
-## Demo
-
-Insert gif or link to demo
-
-
 ## Deployment
 
-To deploy this project run
+To deploy this project use the github actions
 
 ```bash
-  npm run deploy
+   run deploy
 ```
 
 ## Documentation
 
 [Documentation](https://linktodocumentation)
 
-
-## Feedback
-
-If you have any feedback, please reach out to us at [Turntabl Ghana](https://turntabl.io)
 
 ## Installation
 
@@ -152,6 +144,9 @@ This project is used by the following department at Turntabl Ghana:
 We learnt how to use kedro framework since it was our first time working with kedro. Kedro is 
 an open source framework made by quantum black to help data scientist produce reproducible and concise code
 
+## Feedback
+
+If you have any feedback, please reach out to us at [Turntabl Ghana](https://turntabl.io)
 
 ## Acknowledgements
 
