@@ -3,18 +3,10 @@
 
 This project is a Sentiment Analysis project which is built in python and flask framework. Tensorflow and keras was used to build the predictive model. The predictive model predict if a given text is positive, negative or neutral.
 Kedro framework was used to build reproducible and concise code of the machine learning workflow. Flask was used to build the microservice to receive the request object from the fronend client.
-
-
-
-
-## Acknowledgements
-
- - [Turntabl Ghana](https://turntabl.io)
  
-
 ## API Reference
 
-#### Post item
+#### Post a text and a list sentiment type
 
 ```http
   Post localhost:5000/pythonservice/v1/python_service
@@ -24,15 +16,6 @@ Kedro framework was used to build reproducible and concise code of the machine l
 | :-------- | :------- | :-------------------------------- |
 | `text`      | `string` | **Required**. Required, should not be null |
 | `sentiment_type` | `string` |  **Required**. takes a list of sentiment_type []|
-
-
-
-## Appendix
-
-Thank you for using this project.
-Contributors are Clavin, Simona, Edward, Phinehas, Selasi, Charlotte and Andrews from Turntabl Ghana.
-
-
 
 
 ## Contributing
@@ -57,7 +40,6 @@ To deploy this project run
   npm run deploy
 ```
 
-
 ## Documentation
 
 [Documentation](https://linktodocumentation)
@@ -66,22 +48,6 @@ To deploy this project run
 ## Feedback
 
 If you have any feedback, please reach out to us at [Turntabl Ghana](https://turntabl.io)
-
-
-## 🚀 About Us
-We are a team of four who contributed to the development of this project. We work as software 
-emgineers at turntabl Ghana. With the help of our engineering team leads Calvin and Simona we were able to complete this project.
-
-
-
-## Environment Variables
-
-To run this project, you will need to chnage the following file path
-
-`Sentiment.csv`
-
-`sentiment.h5`
-
 
 ## Installation
 
@@ -113,21 +79,25 @@ Install dependencies
 
 Go to the project directory
 ```bash
-  cd kedro_project && cd src
+  cd kedro_project 
 ```
+```bash
+  cd src
+```
+
+## Environment Variables
+
+To run this project, you will need to chnage the following file path
+
+`Sentiment.csv`
+
+`sentiment.h5`
 
 Start the server
 
 ```bash
   python main.py
 ```
-
-
-## Lessons Learned
-We learnt how to use kedro framework since it was our first time working with kedro. Kedro is 
-an open source framework made by quantum black to help data scientist produce reproducible and concise code
-
-
 
 
 ## Roadmap
@@ -151,7 +121,10 @@ For support, email fake@fake.com or join our Slack channel.
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
+## Appendix
 
+Thank you for using this project.
+Contributors are Clavin, Simona, Edward, Phinehas, Selasi, Charlotte and Andrews from Turntabl Ghana.
 
 ## Running Tests
 
@@ -160,7 +133,6 @@ To run tests, run the following command
 ```bash
   pytest
 ```
-
 
 ## Authors
 
@@ -172,6 +144,9 @@ To run tests, run the following command
 - [simona](https://github.com/simona)
 - [clavin](https://github.com/clavin)
 
+## 🚀 About Us
+We are a team of four who contributed to the development of this project. We work as software 
+emgineers at turntabl Ghana. With the help of our engineering team leads Calvin and Simona we were able to complete this project.
 
 ## Used By
 
@@ -179,7 +154,13 @@ This project is used by the following department at Turntabl Ghana:
 
 - Turntabl TTlabs
 
+## Lessons Learned
+We learnt how to use kedro framework since it was our first time working with kedro. Kedro is 
+an open source framework made by quantum black to help data scientist produce reproducible and concise code
 
 
+## Acknowledgements
+
+ - [Turntabl Ghana](https://turntabl.io)
 
 
