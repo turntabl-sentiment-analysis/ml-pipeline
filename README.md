@@ -109,7 +109,7 @@ Start the server
 
 ## Screenshots
 
-![](kedro_project/src/screenshoot/sentiment_project_image.PNG)
+![](kedro_project/src/screenshoot/screenshoot_of_request.PNG)
 
 
 ## Support
