@@ -112,11 +112,6 @@ Start the server
 ![](kedro_project/src/screenshoot/screenshoot_of_request.PNG)
 
 
-## Support
-
-For support, email fake@fake.com or join our Slack channel.
-
-
 ## Badges
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
