@@ -109,7 +109,7 @@ Start the server
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](turntabl-sentiment-analysis/ml-pipeline/blob/develop/kedro_project/src/screenshoot/sentiment_project_image.PNG)
 
 
 ## Support
