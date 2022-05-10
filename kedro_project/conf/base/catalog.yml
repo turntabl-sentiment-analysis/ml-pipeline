@@ -1,0 +1,19 @@
+data:
+  type: pandas.CSVDataSet
+  filepath: data\01_raw\Sentiment.csv
+  load_args:
+    encoding: utf8
+    usecols: ['text','sentiment']
+
+preprocess_dataset:
+    type: pandas.ParquetDataSet
+    filepath: data/02_intermediate/preprocess_dataset.pq
+  
+preprocess_dataset_new:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/preprocess_dataset.csv
+
+model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/model.pickle
+  versioned: true
