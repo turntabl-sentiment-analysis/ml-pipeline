@@ -13,6 +13,6 @@ class PythonModelOutputRequest(BaseModel):
 
 class PythonModelOutputResponse(BaseModel):
     general_response: Dict[str, float]
-    ttlabs_polarity:str
+    TTLABS_POLARITY : str
    
 

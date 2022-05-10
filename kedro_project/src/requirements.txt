@@ -20,11 +20,13 @@ MyPackage==0.1
 numpy==1.20.1
 pandas==1.2.4
 pydantic==1.8.2
-pytest==7.1.1
+# pytest==7.1.1
 recommonmark==0.7.1
 scikit_learn==1.0.2
 setuptools==60.10.0
 spacy==3.2.3
 tensorflow==2.8.0
 textblob==0.17.1
+itsdangerous==2.0.1
+werkzeug==2.0.3
 

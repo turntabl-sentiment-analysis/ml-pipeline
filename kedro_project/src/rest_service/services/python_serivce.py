@@ -24,7 +24,7 @@ def get_service_output(pythonrequest:PythonModelOutputRequest):
             ttlabs_request= ModelPredictionRequest(**ttlabs_data)
             ttlabs_result = predict(ttlabs_request)
             ttlabs_polarity = ttlabs_result.sentiment_type
-            ttlabs_response= {ttlabs_result.sentiment_type:ttlabs_result.score}
+            ttlabs_response= {"TTLABS_POLARITY":ttlabs_result.score}
         
     textblob_data = {"text":pythonrequest.text,"sentiment_type": textblob_sentiment_type}
     textblob_response = get_textblob_output(TextBlobOutputRequest(**textblob_data))
@@ -38,7 +38,7 @@ def get_service_output(pythonrequest:PythonModelOutputRequest):
     else:
        general_response = ttlabs_response
   
-    return PythonModelOutputResponse(general_response = general_response,ttlabs_polarity=ttlabs_polarity)
+    return PythonModelOutputResponse(general_response = general_response,TTLABS_POLARITY=ttlabs_polarity)
         
         
 
