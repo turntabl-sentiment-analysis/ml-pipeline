@@ -8,12 +8,11 @@ from pydantic import BaseModel
 
 class PythonModelOutputRequest(BaseModel):
     text: str
-    sentiment_type: List[PythonSentimentType]
+    sentiment_type: List[str]
 
 
 class PythonModelOutputResponse(BaseModel):
-   result : List[ModelPredictionResponse]
-   textblob_sentiment_type : List[SentimentType]
-
-
+    general_response: Dict[str, float]
+    ttlabs_polarity:str
+   
 

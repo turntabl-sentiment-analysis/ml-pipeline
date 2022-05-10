@@ -8,5 +8,6 @@ class ModelPredictionRequest(BaseModel):
     text: str
 
 class ModelPredictionResponse(BaseModel):
-    sentiment_type  :  str
+    sentiment_type :  str
     score : float
+  
