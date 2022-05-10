@@ -30,15 +30,15 @@ def get_service_output(pythonrequest:PythonModelOutputRequest):
     textblob_response = get_textblob_output(TextBlobOutputRequest(**textblob_data))
     textblob_response = textblob_response.sentiment_response
     if textblob_response and ttlabs_response:
-        general_response = {**textblob_response,**ttlabs_response}
+        sentiment_analysis_response = {**textblob_response,**ttlabs_response}
 
     elif textblob_response:
-       general_response = textblob_response
+       sentiment_analysis_response = textblob_response
 
     else:
-       general_response = ttlabs_response
+       sentiment_analysis_response = ttlabs_response
   
-    return PythonModelOutputResponse(general_response = general_response,TTLABS_POLARITY=ttlabs_polarity)
+    return PythonModelOutputResponse(sentiment_analysis_response = sentiment_analysis_response,TTLABS_POLARITY=ttlabs_polarity)
         
         
 
