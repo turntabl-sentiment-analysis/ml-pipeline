@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./kedro_project/src/rest_service"
+    ]
+}

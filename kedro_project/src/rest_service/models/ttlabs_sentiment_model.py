@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from rest_service.models.enums.sentiment_label import SentimentLabel
+from kedro_project.src.rest_service.models.enums.sentiment_label import SentimentLabel
 
 from typing import Dict, List
 

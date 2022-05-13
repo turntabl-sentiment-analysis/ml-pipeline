@@ -1,7 +1,9 @@
 from flask_pydantic import validate
 from flask import Blueprint
-from rest_service.models.textblob_model import TextBlobOutputRequest
-from rest_service.services.textblob_service import get_textblob_output
+# from rest_service.models.textblob_model import TextBlobOutputRequest
+from kedro_project.src.rest_service.models.textblob_model import TextBlobOutputRequest  
+# from rest_service.services.textblob_service import get_textblob_output
+from kedro_project.src.rest_service.services.textblob_service import get_textblob_output
 
 textblob_model_blueprint = Blueprint('textblob', __name__)
 

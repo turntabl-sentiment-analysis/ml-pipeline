@@ -1,5 +1,6 @@
 import random
-from rest_service.models.random_score_model import ModelOutputRequest, ModelOutputResponse
+# from rest_service.models.random_score_model import ModelOutputRequest, ModelOutputResponse
+from kedro_project.src.rest_service.models.random_score_model import ModelOutputRequest, ModelOutputResponse
 
 
 def get_model_output(body: ModelOutputRequest):

@@ -1,5 +1,8 @@
-from rest_service.models.enums.sentiment_label import SentimentLabel
-from rest_service.models.enums.sentiment_type import SentimentType
+# from rest_service.models.enums.sentiment_label import SentimentLabel
+from msvcrt import kbhit
+from kedro_project.src.rest_service.models.enums.sentiment_label import SentimentLabel
+# from rest_service.models.enums.sentiment_type import SentimentType
+from kedro_project.src.rest_service.models.enums.sentiment_type import SentimentType
 from pydantic import BaseModel
 from typing import List, Dict
 

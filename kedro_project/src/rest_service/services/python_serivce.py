@@ -1,13 +1,13 @@
 
 from multiprocessing.connection import answer_challenge
 from tkinter.messagebox import NO
-from rest_service.models.textblob_model import TextBlobOutputRequest
-from rest_service.models.ttlabs_sentiment_model import ModelPredictionRequest
-from rest_service.models.python_service_model import PythonModelOutputResponse
-from rest_service.models.enums.python_sentiment_label import PythonSentimentType
-from rest_service.services.textblob_service import get_textblob_output
-from rest_service.services.ttlabs_sentiment_service import predict
-from rest_service.models.python_service_model import PythonModelOutputRequest
+from kedro_project.src.rest_service.models.textblob_model import TextBlobOutputRequest
+from kedro_project.src.rest_service.models.ttlabs_sentiment_model import ModelPredictionRequest
+from kedro_project.src.rest_service.models.python_service_model import PythonModelOutputResponse
+from kedro_project.src.rest_service.models.enums.python_sentiment_label import PythonSentimentType
+from kedro_project.src.rest_service.services.textblob_service import get_textblob_output
+from kedro_project.src.rest_service.services.ttlabs_sentiment_service import predict
+from kedro_project.src.rest_service.models.python_service_model import PythonModelOutputRequest
 
 
 def get_service_output(pythonrequest:PythonModelOutputRequest):

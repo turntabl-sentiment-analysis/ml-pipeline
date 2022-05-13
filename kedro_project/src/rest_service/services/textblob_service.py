@@ -1,6 +1,9 @@
-from db import db_connection
-from rest_service.models.enums.sentiment_type import SentimentType
-from rest_service.models.textblob_model import TextBlobOutputRequest, TextBlobOutputResponse
+# from db import db_connection
+from kedro_project.src.db import db_connection
+# from rest_service.models.enums.sentiment_type import SentimentType
+from kedro_project.src.rest_service.models.enums.sentiment_type import SentimentType
+# from rest_service.models.textblob_model import TextBlobOutputRequest, TextBlobOutputResponse
+from kedro_project.src.rest_service.models.textblob_model import TextBlobOutputRequest, TextBlobOutputResponse
 from textblob import TextBlob
 
 

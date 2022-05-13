@@ -1,8 +1,9 @@
 from posixpath import split
 from xml.sax.handler import property_interning_dict
-from rest_service.models.enums.sentiment_label import SentimentLabel
-from rest_service.models.ttlabs_sentiment_model import ModelPredictionRequest
-from rest_service.models.ttlabs_sentiment_model import ModelPredictionResponse
+from kedro_project.src.rest_service.models.enums.sentiment_label import SentimentLabel
+from kedro_project.src.rest_service.models.ttlabs_sentiment_model import ModelPredictionRequest
+from kedro_project.src.rest_service.models.ttlabs_sentiment_model import ModelPredictionResponse
+
 import numpy as np
 import pandas as pd
 import tensorflow as tf
@@ -12,7 +13,8 @@ from keras.preprocessing.text import Tokenizer
 
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-from kedro_pipeline.pipelines.data_processing.nodes import preprocess_data
+# from kedro_pipeline.pipelines.data_processing.nodes import preprocess_data
+from kedro_project.src.kedro_pipeline.pipelines.data_processing.nodes import preprocess_data
 
 data1 = pd.read_csv("C://Users//User//ml-pipeline//kedro_project\src//rest_service//csv_dataset//Sentiment.csv")
 tokenizer = Tokenizer(num_words=2000, split=' ')
